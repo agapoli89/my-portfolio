@@ -8,10 +8,9 @@
 
 .App {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $background-main-color;
+  background-color: $background-main-color; 
   width: 100vw;
   height: 100vh;
 }
