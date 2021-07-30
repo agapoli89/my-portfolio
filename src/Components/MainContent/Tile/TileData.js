@@ -22,6 +22,35 @@ export const tileData = {
             title: 'Moje prace',
             img: 'works',
             additionalClass: 'tile--outstanding',
+            content: {
+                moreCode: 'Trochę więcej',
+                projects: [
+                    {
+                        title: 'Przewodnik miejski - wizytówka',
+                        linkToLive: 'https://agapoli89.github.io/WroGuide-update/',
+                        linkToCode: 'https://github.com/agapoli89/WroGuide-update',
+                        image: 'guide',
+                    },
+                    {
+                        title: 'Lista zakupów',
+                        linkToLive: 'https://agapoli89.github.io/Shopping-list/',
+                        linkToCode: 'https://github.com/agapoli89/Shopping-list',
+                        image: 'shoppinglist',
+                    },
+                    {
+                        title: 'Lista "to-do"',
+                        linkToLive: 'https://agapoli89.github.io/toDoList/',
+                        linkToCode: 'https://github.com/agapoli89/toDoList',
+                        image: 'todolist',
+                    },
+                    {
+                        title: 'Baza ras psów',
+                        linkToLive: 'https://agapoli89.github.io/The-breed-s-base/',
+                        linkToCode: 'https://github.com/agapoli89/The-breed-s-base',
+                        image: 'breeds',
+                    }
+                ]
+            }
         },
         {
             id: 4,
@@ -52,6 +81,35 @@ export const tileData = {
             title: 'My projects',
             img: 'works',
             additionalClass: 'tile--outstanding',
+            content: {
+                moreCode: 'A little more',
+                projects: [
+                    {
+                        title: 'City guide - business card website',
+                        linkToLive: 'https://agapoli89.github.io/WroGuide-update/',
+                        linkToCode: 'https://github.com/agapoli89/WroGuide-update',
+                        image: 'guide',
+                    },
+                    {
+                        title: 'Shopping List',
+                        linkToLive: 'https://agapoli89.github.io/Shopping-list/',
+                        linkToCode: 'https://github.com/agapoli89/Shopping-list',
+                        image: 'shoppinglist',
+                    },
+                    {
+                        title: '"To-do" list',
+                        linkToLive: 'https://agapoli89.github.io/toDoList/',
+                        linkToCode: 'https://github.com/agapoli89/toDoList',
+                        image: 'todolist',
+                    },
+                    {
+                        title: "The dog breed's base",
+                        linkToLive: 'https://agapoli89.github.io/The-breed-s-base/',
+                        linkToCode: 'https://github.com/agapoli89/The-breed-s-base',
+                        image: 'breeds',
+                    }
+                ]
+            }
         },
         {
             id: 4,
