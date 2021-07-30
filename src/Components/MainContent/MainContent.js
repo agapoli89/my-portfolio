@@ -3,7 +3,7 @@ import { tileData } from './Tile/TileData';
 
 import './MainContent.scss';
 import { useState } from 'react';
-import AboutMe from './Tile/TileContent/AboutMe';
+import TileContent from './Tile/TileContent/TileContent';
 
 const MainContent = ({lang}) => {
     const [visibledContent, setVisibledContent] = useState(null);
@@ -18,8 +18,8 @@ const MainContent = ({lang}) => {
 
     const showTileContent = id => {
         setVisibledContent(
-            id === "1"
-                ? <AboutMe handleExitButton={closeTileContent} langToDisplay={langToDisplay}/>
+            id === "1" || "3" || "4"
+                ? <TileContent id={id} handleExitButton={closeTileContent} langToDisplay={langToDisplay}/>
                 : null
         )
     }
