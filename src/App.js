@@ -16,15 +16,6 @@ function App() {
     <div className="App">
       <LangButton lang={lang} handleChangeLang={handleChangeLang}/>
       <MainContent lang={lang}/>
-      {/*         <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        > 
-          Learn React
-        </a> */}
     </div>
   );
 }
