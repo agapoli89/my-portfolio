@@ -15,8 +15,8 @@ const Project = ({title, linkToLive, linkToCode, image}) => {
                 (<div className={'tile__content__my-project__text'}>
                     {title}
                     <div className={'tile__content__my-project__text--icons'}>
-                        <a className="tile__content__link--icon" href={linkToLive}><IoPlayCircle /></a>
-                        <a className="tile__content__link--icon" href={linkToCode}><IoInformationCircleSharp /></a>
+                        <a className="tile__content__link--icon" href={linkToLive} rel="noopener noreferrer" target="_blank"><IoPlayCircle /></a>
+                        <a className="tile__content__link--icon" href={linkToCode} rel="noopener noreferrer" target="_blank"><IoInformationCircleSharp /></a>
                     </div>
                 </div>)}
         </div>
