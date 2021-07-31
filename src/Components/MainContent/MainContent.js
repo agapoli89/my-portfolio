@@ -2,6 +2,7 @@ import Tile from './Tile/Tile';
 import { tileData } from './Tile/TileData';
 
 import './MainContent.scss';
+import './Tile/Tile.scss';
 import { useState, useContext } from 'react';
 import TileContent from './Tile/TileContent/TileContent';
 import { LangContext } from '../../App';
@@ -28,7 +29,11 @@ const MainContent = () => {
     }
     
     const tiles = tileData[lang].map(tile => (
-        <Tile key={tile.id} {...tile} handleVisibledContent={handleVisibledContent} />
+        <Tile 
+            key={tile.id} 
+            {...tile} 
+            handleVisibledContent={handleVisibledContent} 
+        />
     ))
 
     return (  

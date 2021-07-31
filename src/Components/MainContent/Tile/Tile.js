@@ -4,13 +4,20 @@ import works from '../../../images/works.png';
 
 import './Tile.scss';
 
-const Tile = ({id, title, img, additionalClass, additionalTextClass, handleVisibledContent}) => {
+const Tile = ({
+    id, 
+    title, 
+    img, 
+    additionalClass, 
+    additionalTextClass, 
+    handleVisibledContent,
+}) => {
     const image = img && (
         <img 
             src={img === 'aboutme'
                     ? aboutme
                     : img === 'phone'
-                        ? phone
+                        ? phone 
                         : works}
             className="tile__image" 
             alt={title} 
@@ -18,7 +25,11 @@ const Tile = ({id, title, img, additionalClass, additionalTextClass, handleVisib
     )
     
     return (  
-        <button id={id} className={`tile ${additionalClass}`} onClick={handleVisibledContent}>
+        <button 
+            id={id} 
+            className={`tile ${additionalClass}`} 
+            onClick={handleVisibledContent}
+        >
             {image}
             <h2 className={`tile__text ${additionalTextClass}`}>{title}</h2>
         </button>
