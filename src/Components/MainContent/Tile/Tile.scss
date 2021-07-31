@@ -12,7 +12,6 @@
     background-color: $light-color;
     color: $semi-dark-one-color;
     cursor: pointer;
-
     &--withoutImg {
         background-color: transparent;
         color: $light-color;
@@ -177,5 +176,15 @@
             opacity: .6;
             cursor: pointer;
         }
+    }
+}
+
+.main-content {
+    &:hover > .tile {
+        opacity: .5;
+        transition: opacity .4s; 
+    }
+    &:hover > .tile:hover {
+        opacity: 1;
     }
 }
