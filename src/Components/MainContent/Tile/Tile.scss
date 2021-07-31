@@ -51,15 +51,29 @@
         color: $light-color;
         text-align: justify;
         border-radius: 5px;
-        &--my-works {
+        &--center {
             text-align: center;
         }
         &__link {
             text-decoration: none;
             color: $light-color;
+            cursor: pointer;
             &--icon {
-                color: $semi-dark-two-color;
-                cursor: pointer;
+                color: $semi-dark-two-color; 
+            }
+            &--icon-contact {
+                margin: 3vmin;
+                font-size: 8vmin;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &--text {
+                font-size: 5vmin;
+            }
+            &--social-media {
+                margin: 2vmin;
+                font-size: 12vmin;
             }
         }
         &__subtitle {
@@ -134,6 +148,17 @@
                 &--icons {
                     font-size: 12vmin;;
                 }
+            }
+        }
+        &__contact-data {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            &__subtitle {
+                margin-bottom: 3vmin;
+                font-size: 5vmin;
             }
         }
         &__exit-button {

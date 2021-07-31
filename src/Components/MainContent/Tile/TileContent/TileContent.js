@@ -1,14 +1,18 @@
-import { IoLogoJavascript, IoLogoReact, IoLogoHtml5, IoLogoCss3, IoLogoSass, IoLogoGithub, IoLogoFirebase, IoLogoWordpress, IoArrowBackOutline } from "react-icons/io5";
+import { IoLogoJavascript, IoLogoReact, IoLogoHtml5, IoLogoCss3, IoLogoSass, IoLogoGithub, IoLogoFirebase, IoLogoWordpress, IoArrowBackOutline, IoLogoLinkedin, IoLogoInstagram, IoLogoFacebook, IoMailOutline } from "react-icons/io5";
 import { SiTypescript, SiBootstrap, SiJquery, SiGit } from "react-icons/si";
+import { FaPhoneAlt } from "react-icons/fa";
 
 import ExitButton from './ExitButton';
 import Project from './Project';
 import { tileData } from '../TileData';
+import { useContext } from "react";
+import {LangContext} from '../../../../App';
 
-const TileContent = ({id, handleExitButton, langToDisplay}) => {
-
-    const { header, par1, par2, subtitle } = tileData[langToDisplay][0].content;
-    const { moreCode, projects } = tileData[langToDisplay][2].content;
+const TileContent = ({id, handleExitButton}) => {
+    const lang = useContext(LangContext).lang;
+    
+    const { header, par1, par2, subtitle } = tileData[lang][0].content;
+    const { moreCode, projects } = tileData[lang][2].content;
 
     const tileContentToDisplay = id === '1'
         ? (
@@ -53,10 +57,35 @@ const TileContent = ({id, handleExitButton, langToDisplay}) => {
                     </div>
                 </>
             )
-            : <div>4</div>
+            : (
+                <div className="tile__content__contact-data">
+                    <div>
+                        <a href="tel:+48508071833" rel="noopener noreferrer" className="tile__content__link tile__content__link--icon-contact">
+                            <FaPhoneAlt /> 
+                            <span className="tile__content__link--text">+48 508071833</span>
+                        </a>
+                        <a href="mailto:agapoli@gmail.com" rel="noopener noreferrer" className="tile__content__link tile__content__link--icon-contact">
+                            <IoMailOutline />
+                            <span className="tile__content__link--text">agapoli@gmail.com</span>
+                        </a>
+                    </div>
+                    <div>
+                        <h5 className="tile__content__contact-data__subtitle">{tileData[lang][3].content}</h5>
+                        <a href="https://www.linkedin.com/in/agnieszka-poli%C5%84ska-a76401171/" rel="noopener noreferrer" className="tile__content__link tile__content__link--social-media" target="_blank">
+                            <IoLogoLinkedin />
+                        </a>
+                        <a href="https://www.instagram.com/agapoli89/" rel="noopener noreferrer" className="tile__content__link tile__content__link--social-media" target="_blank">
+                            <IoLogoInstagram />
+                        </a>
+                        <a href="https://www.facebook.com/agnieszka.polinska.9/" rel="noopener noreferrer" className="tile__content__link tile__content__link--social-media" target="_blank">
+                            <IoLogoFacebook />
+                        </a>
+                    </div>
+                </div>
+            )
 
     return (
-        <div className={`tile__content ${id === "3" && 'tile__content--my-works'}`}>
+        <div className={`tile__content ${id !== "1" && 'tile__content--center'}`}>
             <ExitButton handleExitButton={handleExitButton}/>
             {tileContentToDisplay}
         </div>
