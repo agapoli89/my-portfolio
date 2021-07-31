@@ -2,12 +2,13 @@ import Tile from './Tile/Tile';
 import { tileData } from './Tile/TileData';
 
 import './MainContent.scss';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import TileContent from './Tile/TileContent/TileContent';
+import { LangContext } from '../../App';
 
-const MainContent = ({lang}) => {
+const MainContent = () => {
+    const lang = useContext(LangContext).lang;
     const [visibledContent, setVisibledContent] = useState(null);
-    const langToDisplay = lang === 'PL' ? 'en' : 'pl';
 
     const handleVisibledContent = (e) => {
         const element = e.target.tagName === "BUTTON"
@@ -18,9 +19,7 @@ const MainContent = ({lang}) => {
 
     const showTileContent = id => {
         setVisibledContent(
-            id === "1" || "3" || "4"
-                ? <TileContent id={id} handleExitButton={closeTileContent} langToDisplay={langToDisplay}/>
-                : null
+            id !== "2" && <TileContent id={id} handleExitButton={closeTileContent}/>
         )
     }
 
@@ -28,7 +27,7 @@ const MainContent = ({lang}) => {
         setVisibledContent(null)
     }
     
-    const tiles = tileData[langToDisplay].map(tile => (
+    const tiles = tileData[lang].map(tile => (
         <Tile key={tile.id} {...tile} handleVisibledContent={handleVisibledContent} />
     ))
 

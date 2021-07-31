@@ -1,5 +1,5 @@
 export const tileData = {
-    pl: [
+    en: [
         {   
             id: 1,
             title: 'Słowo o mnie',
@@ -56,9 +56,10 @@ export const tileData = {
             id: 4,
             title: 'Kontakt',
             img: 'phone',
+            content: 'Znajdziesz mnie też na mediach społecznościowych:',
         },
     ],
-    en: [
+    pl: [
         {   
             id: 1,
             title: 'About me',
@@ -115,6 +116,7 @@ export const tileData = {
             id: 4,
             title: 'Contact',
             img: 'phone',
+            content: 'You can also find me on Social Media:',
         },
     ]
 }
