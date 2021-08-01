@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 import aboutme from '../../../images/aboutme.png';
 import phone from '../../../images/phone.png';
 import works from '../../../images/works.png';
@@ -25,14 +27,17 @@ const Tile = ({
     )
     
     return (  
-        <button 
+        <motion.button 
             id={id} 
             className={`tile ${additionalClass}`} 
             onClick={handleVisibledContent}
+            initial={{ x: '-100vw' }}
+            animate={{ x: 0 }}
+            transition={{ type: 'spring', delay: id / 2.5 }}
         >
             {image}
             <h2 className={`tile__text ${additionalTextClass}`}>{title}</h2>
-        </button>
+        </motion.button>
     );
 }
  
