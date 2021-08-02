@@ -1,6 +1,7 @@
 import { IoLogoJavascript, IoLogoReact, IoLogoHtml5, IoLogoCss3, IoLogoSass, IoLogoGithub, IoLogoFirebase, IoLogoWordpress, IoArrowBackOutline, IoLogoLinkedin, IoLogoInstagram, IoLogoFacebook, IoMailOutline } from "react-icons/io5";
 import { SiTypescript, SiBootstrap, SiJquery, SiGit } from "react-icons/si";
 import { FaPhoneAlt } from "react-icons/fa";
+import { motion } from 'framer-motion';
 
 import ExitButton from './ExitButton';
 import Project from './Project';
@@ -83,12 +84,31 @@ const TileContent = ({id, handleExitButton}) => {
                     </div>
                 </div>
             )
-
+    const tileContentVariants = {
+        hidden: {
+            opacity: 0,
+            scale: 0,
+        },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 2,
+            }
+        }
+    }   
+    
     return (
-        <div className={`tile__content ${id !== "1" && 'tile__content--center'}`}>
+        <motion.div 
+            className={`tile__content ${id !== "1" && 'tile__content--center'}`}
+            variants={tileContentVariants}
+            initial='hidden'
+            animate='visible'
+            exit="hidden"
+        >
             <ExitButton handleExitButton={handleExitButton}/>
             {tileContentToDisplay}
-        </div>
+        </motion.div>
     );
 }
  
