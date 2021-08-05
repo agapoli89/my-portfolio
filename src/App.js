@@ -1,10 +1,13 @@
 //import logo from './logo.svg';
 import React, { useState } from 'react';
+import { Route, Switch } from "react-router-dom";
 
 import LangButton from './LangButton/LangButton';
-import MainContent from './Components/MainContent/MainContent';
+import Home from './Components/Home/Home';
+import TileContent from './Components/Tile/TileContent/TileContent';
 
 import './App.scss';
+import './Components/Tile/Tile.scss'
 
 export const LangContext = React.createContext('en');
 
@@ -16,7 +19,14 @@ function App() {
     <LangContext.Provider value={{lang}}>
       <div className="App">
         <LangButton lang={lang} handleChangeLang={handleChangeLang}/>
-        <MainContent />
+        <Switch>
+          <Route path={`/:id`}>
+            <TileContent />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
       </div>
     </LangContext.Provider>
   );

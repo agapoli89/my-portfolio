@@ -7,15 +7,18 @@ import ExitButton from './ExitButton';
 import Project from './Project';
 import { tileData } from '../TileData';
 import { useContext } from "react";
-import {LangContext} from '../../../../App';
+import {LangContext} from '../../../App';
+import { useLocation } from "react-router-dom";
 
-const TileContent = ({id, handleExitButton}) => {
+const TileContent = () => {
     const lang = useContext(LangContext).lang;
     
     const { header, par1, par2, subtitle } = tileData[lang][0].content;
     const { moreCode, projects } = tileData[lang][2].content;
+    const location = useLocation();
+    const id = location.pathname;
 
-    const tileContentToDisplay = id === '1'
+    const tileContentToDisplay = id === '/1'
         ? (
             <>
                 <h3>{header}</h3>
@@ -38,7 +41,7 @@ const TileContent = ({id, handleExitButton}) => {
                 </div>
             </>
         )
-        : id === "3"
+        : id === "/3"
             ? (
                 <>
                     <p className="tile__content__more-code">
@@ -84,29 +87,30 @@ const TileContent = ({id, handleExitButton}) => {
                     </div>
                 </div>
             )
+
     const tileContentVariants = {
-        hidden: {
-            opacity: 0,
-            scale: 0,
-        },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                duration: 2,
+            hidden: {
+                opacity: 0,
+                scale: 0,
+            },
+            visible: {
+                opacity: 1,
+                scale: 1,
+                transition: {
+                    duration: 2,
+                }
             }
-        }
-    }   
-    
+        }   
+        
     return (
         <motion.div 
             className={`tile__content ${id !== "1" && 'tile__content--center'}`}
             variants={tileContentVariants}
             initial='hidden'
             animate='visible'
-            exit="hidden"
+            exit='hidden'
         >
-            <ExitButton handleExitButton={handleExitButton}/>
+            <ExitButton />
             {tileContentToDisplay}
         </motion.div>
     );

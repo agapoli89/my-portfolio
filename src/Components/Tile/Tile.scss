@@ -1,4 +1,4 @@
-@import '../../../styles/colors.scss';
+@import '../../styles/colors.scss';
 
 .tile {
     width: 65vw;
@@ -38,6 +38,8 @@
         letter-spacing: 1px;
         &--withoutImg {
             font-size: 3.5vh;
+            font-weight: bold;
+            text-align: center;
         }
     }
 
@@ -121,16 +123,16 @@
             background-color:  rgba(191, 154, 154, 1);
             border-radius: 5px;
             &--guide {
-                background-image: url('../../../images/guide.jpg');
+                background-image: url('../../images/guide.jpg');
             }
             &--shoppinglist {
-                background-image: url('../../../images/shoppinglist.png');
+                background-image: url('../../images/shoppinglist.png');
             }
             &--todolist {
-                background-image: url('../../../images/todolist.png');
+                background-image: url('../../images/todolist.png');
             }
             &--breeds {
-                background-image: url('../../../images/breeds.png');
+                background-image: url('../../images/breeds.png');
             }
             &__text {
                 font-size: 6vmin;
@@ -179,12 +181,12 @@
     }
 }
 
-.main-content {
-    &:hover > .tile {
+.home {
+    &:hover > .tile-to-hover {
         opacity: .5;
-        transition: opacity .4s; 
     }
-    &:hover > .tile:hover {
+    &:hover > .tile-to-hover:hover {
         opacity: 1;
     }
 }
+
