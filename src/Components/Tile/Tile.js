@@ -25,14 +25,34 @@ const Tile = ({
         />
     )
 
+    const tileVariants = {
+        hidden: {
+            x: '-100vw',
+        },
+        visible: {
+            x: 0,
+            transition: {
+                type: 'spring', 
+                delay: id / 2.5,
+            }
+        },
+        exit: {
+            opacity: 0,
+            transition: {
+                duration: 1,
+            }
+        },
+    }   
+
     return (  
         <Link to={`${id}`} className='tile-to-hover tile__link'>
             <motion.button 
                 id={id} 
-                className={`tile ${additionalClass}`} 
-                initial={{ x: '-100vw' }}
-                animate={{ x: 0 }}
-                transition={{ type: 'spring', delay: id / 2.5 }}
+                className={`tile ${additionalClass}`}
+                variants={tileVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
             >
                 {image}
                 <h2 className={`tile__text ${additionalTextClass}`}>{title}</h2>

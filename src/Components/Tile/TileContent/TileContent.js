@@ -99,7 +99,14 @@ const TileContent = () => {
                 transition: {
                     duration: 2,
                 }
-            }
+            },
+            exit: {
+                opacity: 0,
+                scale: 0,
+                transition: {
+                    duration: 2,
+                }
+            },
         }   
         
     return (
@@ -108,7 +115,7 @@ const TileContent = () => {
             variants={tileContentVariants}
             initial='hidden'
             animate='visible'
-            exit='hidden'
+            exit='exit'
         >
             <ExitButton />
             {tileContentToDisplay}

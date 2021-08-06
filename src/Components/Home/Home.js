@@ -11,6 +11,24 @@ const Home = () => {
     const lang = useContext(LangContext).lang;
     
     const tiles = tileData[lang].map(tile => {
+        const tileVariants = {
+            hidden: {
+                x: '-100vw',
+            },
+            visible: {
+                x: 0,
+                transition: {
+                    type: 'spring', 
+                    delay: tile.id / 2.5,
+                }
+            },
+            exit: {
+                opacity: 0,
+                transition: {
+                    duration: 1,
+                }
+            },
+        } 
         return tile.id !== 2
         ? <Tile key={tile.id} {...tile} />
         : (
@@ -18,9 +36,10 @@ const Home = () => {
                 key={tile.id}
                 id={tile.id} 
                 className={`tile-to-hover tile ${tile.additionalClass}`} 
-                initial={{ x: '-100vw' }}
-                animate={{ x: 0 }}
-                transition={{ type: 'spring', delay: tile.id / 2.5 }}
+                variants={tileVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
             >
                 <h2 className={`tile__text ${tile.additionalTextClass}`}>{tile.title}</h2>
             </motion.div>
