@@ -26,7 +26,7 @@ const Tile = ({
     )
 
     return (  
-        <Link to={`${id}`} className='tile-to-hover tile__content__link'>
+        <Link to={`${id}`} className='tile-to-hover tile__link'>
             <motion.button 
                 id={id} 
                 className={`tile ${additionalClass}`} 
