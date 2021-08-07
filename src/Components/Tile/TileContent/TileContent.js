@@ -97,14 +97,14 @@ const TileContent = () => {
                 opacity: 1,
                 scale: 1,
                 transition: {
-                    duration: 2,
+                    duration: 1,
                 }
             },
             exit: {
-                opacity: 0,
-                scale: 0,
+                x: '+100vw',
                 transition: {
-                    duration: 2,
+                    ease: 'easeInOut',
+                    duration: .5,
                 }
             },
         }   
