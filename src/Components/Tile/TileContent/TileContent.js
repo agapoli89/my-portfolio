@@ -26,18 +26,18 @@ const TileContent = () => {
                 <p>{par2}</p>
                 <h4 className="tile__content__about-me__subtitle">{subtitle}</h4>
                 <div className="tile__content__about-me__icons-box">
-                    <IoLogoJavascript />
-                    <IoLogoReact />
-                    <SiTypescript />
-                    <IoLogoHtml5 />
-                    <IoLogoCss3 />
-                    <IoLogoSass />
-                    <SiBootstrap />
-                    <SiJquery />
-                    <SiGit />
-                    <IoLogoGithub />
-                    <IoLogoFirebase />
-                    <IoLogoWordpress />
+                    <IoLogoJavascript title="JavaScript"/>
+                    <IoLogoReact title="React"/>
+                    <SiTypescript title="TypeScript"/>
+                    <IoLogoHtml5 title="HTML5"/>
+                    <IoLogoCss3 title="CSS3"/>
+                    <IoLogoSass title="SASS"/>
+                    <SiBootstrap title="Bootstrap"/>
+                    <SiJquery title="JQuery"/>
+                    <SiGit title="Git"/>
+                    <IoLogoGithub title="GitHub"/>
+                    <IoLogoFirebase title="Firebase"/>
+                    <IoLogoWordpress title="Wordpress"/>
                 </div>
             </>
         )
