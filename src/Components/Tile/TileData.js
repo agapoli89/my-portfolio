@@ -4,6 +4,7 @@ export const tileData = {
             id: 1,
             title: 'Słowo o mnie',
             img: 'aboutme',
+            delay: 0,
             content: {
                 header: 'O mnie',
                 par1: 'Miłośniczka psów, rowerów miejskich, kuchni roślinnej i górskich wędrówek.',
@@ -16,12 +17,14 @@ export const tileData = {
             title: 'Dzień dobry! Fajnie, że jesteś :)',
             additionalClass: 'tile--withoutImg',
             additionalTextClass: 'tile__text--withoutImg',
+            delay: 1,
         },
         {
             id: 3,
             title: 'Moje prace',
             img: 'works',
             additionalClass: 'tile--outstanding',
+            delay: .5,
             content: {
                 moreCode: 'Trochę więcej',
                 projects: [
@@ -57,6 +60,7 @@ export const tileData = {
             title: 'Kontakt',
             img: 'phone',
             content: 'Znajdziesz mnie też na mediach społecznościowych:',
+            delay: 0,
         },
     ],
     pl: [
@@ -64,6 +68,7 @@ export const tileData = {
             id: 1,
             title: 'About me',
             img: 'aboutme',
+            delay: 0,
             content: {
                 header: 'About me',
                 par1: 'Dogs, city bikes, plant-based cousine and hiking lover.',
@@ -76,12 +81,14 @@ export const tileData = {
             title: 'Hello! Nice to see You :)',
             additionalClass: 'tile--withoutImg',
             additionalTextClass: 'tile__text--withoutImg',
+            delay: 1,
         },
         {
             id: 3,
             title: 'My projects',
             img: 'works',
             additionalClass: 'tile--outstanding',
+            delay: .5,
             content: {
                 moreCode: 'A little more',
                 projects: [
@@ -117,6 +124,7 @@ export const tileData = {
             title: 'Contact',
             img: 'phone',
             content: 'You can also find me on Social Media:',
+            delay: 0,
         },
     ]
 }

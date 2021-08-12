@@ -10,14 +10,15 @@ const Tile = ({
     title, 
     img, 
     additionalClass, 
-    additionalTextClass, 
+    additionalTextClass,
+    delay, 
     }) => {
     
     const image = img && (
         <img 
             src={img === 'aboutme'
                     ? aboutme
-                    : img === 'phone'
+                    : img === 'phone' 
                         ? phone 
                         : works}
             className="tile__image" 
@@ -33,7 +34,7 @@ const Tile = ({
             x: 0,
             transition: {
                 type: 'spring', 
-                delay: id / 2.5,
+                delay: delay,
             }
         },
         exit: {

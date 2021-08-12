@@ -13,13 +13,14 @@ const Home = () => {
     const tiles = tileData[lang].map(tile => {
         const tileVariants = {
             hidden: {
-                x: '-100vw',
+                opacity: 0,
             },
             visible: {
-                x: 0,
+                opacity: 1,
                 transition: {
-                    type: 'spring', 
-                    delay: tile.id / 2.5,
+                    ease: 'easeInOut',
+                    delay: tile.delay,
+                    duration: .5,
                 }
             },
             exit: {
