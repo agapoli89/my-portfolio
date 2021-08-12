@@ -46,7 +46,7 @@ const Tile = ({
     }   
 
     return (  
-        <Link to={`${id}`} className='tile-to-hover tile__link'>
+        <Link to={`${id}`} className={`tile-to-hover tile__link ${id === 3 && 'tile--outstanding-parent'}`}>
             <motion.button 
                 id={id} 
                 className={`tile ${additionalClass}`}

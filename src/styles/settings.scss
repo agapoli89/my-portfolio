@@ -1,0 +1,17 @@
+@mixin setFlex($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin small {
+    @media screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
