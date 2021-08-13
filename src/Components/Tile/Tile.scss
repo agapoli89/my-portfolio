@@ -111,7 +111,7 @@
         &__about-me {
             &__subtitle {
             text-align: center;
-            padding: 3vw;
+            padding: 2vw;
             }
             &__icons-box {
                 padding: 3vw;
@@ -119,7 +119,10 @@
                 flex-wrap: wrap;
                 gap: 3vw;
                 justify-content: center;
-                font-size: 12vmin;
+                font-size: 11vmin;
+                @include medium {
+                    padding: 1vw;
+                }
             }
         }
         &__my-projects {
