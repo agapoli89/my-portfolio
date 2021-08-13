@@ -14,7 +14,8 @@ export const LangContext = React.createContext('en');
 
 function App() {
   const location = useLocation();
-  const [lang, setLang] = useState('pl');
+  const navLang = window.navigator.language.substr(0, 2);
+  const [lang, setLang] = useState(navLang === 'pl' ? 'en' : 'pl');
   const handleChangeLang = () => setLang(prev => prev === 'pl' ? 'en' : 'pl')
 
   return (
