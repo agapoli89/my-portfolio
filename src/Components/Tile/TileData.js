@@ -8,14 +8,14 @@ export const tileData = {
             delay: 0,
             content: {
                 header: 'O mnie',
-                par1: 'Miłośniczka psów, rowerów miejskich, kuchni roślinnej i górskich wędrówek.',
-                par2: 'Mimo, że wykształcenie mam humanistyczne, coraz bardziej pochłania mnie programowanie. Potrafię spędzać godziny analizując i udoskonalając kod, co jak do tej pory sprawia mi olbrzymią frajdę :)',
-                subtitle: 'Technologie i umiejętności',
+                par1: 'Miłośniczka psów, rowerów miejskich, kuchni roślinnej i\xa0górskich wędrówek.',
+                par2: 'Mimo, że\xa0wykształcenie mam humanistyczne, coraz bardziej pochłania mnie programowanie. Potrafię spędzać godziny analizując i\xa0udoskonalając kod, co jak do tej pory sprawia mi olbrzymią frajdę :)',
+                subtitle: 'Technologie i\xa0umiejętności',
             }
         },
         {
             id: 2,
-            title: 'Dzień dobry! Fajnie, że jesteś :)',
+            title: 'Dzień dobry! Fajnie, że\xa0jesteś :)',
             additionalClass: 'tile--withoutImg',
             additionalTextClass: 'tile__text--withoutImg',
             delay: 1,
@@ -75,8 +75,8 @@ export const tileData = {
             delay: 0,
             content: {
                 header: 'About me',
-                par1: 'Dogs, city bikes, plant-based cousine and hiking lover.',
-                par2: "Though I always thought I have a humanist's soul I feel great in programming. I could spend hours analysing or improving code and I really enjoy it :)",
+                par1: 'Dogs, city bikes, plant-based cousine and\xa0hiking lover.',
+                par2: "Though I\xa0always thought I\xa0have a\xa0humanist's soul I\xa0feel great in\xa0programming. I\xa0could spend hours analysing or\xa0improving code and\xa0I\xa0really enjoy\xa0it :)",
                 subtitle: 'Technologies and skills',
             }
         },
