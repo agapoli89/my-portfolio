@@ -2,6 +2,7 @@ export const tileData = {
     en: [
         {   
             id: 1,
+            url: 'about-me',
             title: 'Słowo o mnie',
             img: 'aboutme',
             delay: 0,
@@ -21,6 +22,7 @@ export const tileData = {
         },
         {
             id: 3,
+            url: 'my-projects',
             title: 'Moje prace',
             img: 'works',
             additionalClass: 'tile--outstanding',
@@ -57,6 +59,7 @@ export const tileData = {
         },
         {
             id: 4,
+            url: 'contact-me',
             title: 'Kontakt',
             img: 'phone',
             content: 'Znajdziesz mnie też na mediach społecznościowych:',
@@ -66,6 +69,7 @@ export const tileData = {
     pl: [
         {   
             id: 1,
+            url: 'about-me',
             title: 'About me',
             img: 'aboutme',
             delay: 0,
@@ -85,6 +89,7 @@ export const tileData = {
         },
         {
             id: 3,
+            url: 'my-projects',
             title: 'My projects',
             img: 'works',
             additionalClass: 'tile--outstanding',
@@ -121,6 +126,7 @@ export const tileData = {
         },
         {
             id: 4,
+            url: 'contact-me',
             title: 'Contact',
             img: 'phone',
             content: 'You can also find me on Social Media:',

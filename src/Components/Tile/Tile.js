@@ -6,7 +6,8 @@ import phone from '../../images/phone.png';
 import works from '../../images/works.png';
 
 const Tile = ({
-    id, 
+    id,
+    url, 
     title, 
     img, 
     additionalClass, 
@@ -47,7 +48,7 @@ const Tile = ({
     }   
 
     return (  
-        <Link to={`${id}`} className={`tile-to-hover tile__link ${id === 3 && 'tile--outstanding-parent'}`}>
+        <Link to={`${url}`} className={`tile-to-hover tile__link ${id === 3 && 'tile--outstanding-parent'}`}>
             <motion.button 
                 id={id} 
                 className={`tile ${additionalClass}`}

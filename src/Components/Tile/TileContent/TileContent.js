@@ -16,9 +16,9 @@ const TileContent = () => {
     const { header, par1, par2, subtitle } = tileData[lang][0].content;
     const { moreCode, projects } = tileData[lang][2].content;
     const location = useLocation();
-    const id = location.pathname;
+    const url = location.pathname;
 
-    const tileContentToDisplay = id === '/1'
+    const tileContentToDisplay = url === '/about-me'
         ? (
             <>
                 <h3>{header}</h3>
@@ -41,7 +41,7 @@ const TileContent = () => {
                 </div>
             </>
         )
-        : id === "/3"
+        : url === "/my-projects"
             ? (
                 <>
                     <p className="tile__content__my-projects__subtitle">
@@ -61,7 +61,8 @@ const TileContent = () => {
                     </div>
                 </>
             )
-            : (
+            : url === "/contact-me" 
+                ? (
                 <div className="tile__content__contact-data">
                     <div>
                         <a href="tel:+48508071833" rel="noopener noreferrer" className="tile__link tile__link--icon-contact">
@@ -86,7 +87,7 @@ const TileContent = () => {
                         </a>
                     </div>
                 </div>
-            )
+            ) : <p className="tile__content__contact-data">Coś poszło nie tak...</p>
 
     const tileContentVariants = {
             hidden: {
@@ -111,7 +112,7 @@ const TileContent = () => {
         
     return (
         <motion.div 
-            className={`tile__content ${id !== "/1" && 'tile__content--center'}`}
+            className={`tile__content ${url !== "/about-me" && 'tile__content--center'}`}
             variants={tileContentVariants}
             initial='hidden'
             animate='visible'

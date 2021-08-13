@@ -23,11 +23,14 @@ function App() {
         <LangButton lang={lang} handleChangeLang={handleChangeLang}/>
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.key}>
-            <Route path={`/:id`}>
-              <TileContent />
-            </Route>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/my-portfolio">
+              <Home />
+            </Route>
+            <Route path={`/:url`}>
+              <TileContent />
             </Route>
           </Switch>
         </AnimatePresence>
