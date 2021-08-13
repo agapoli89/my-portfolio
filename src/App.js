@@ -26,9 +26,6 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/my-portfolio">
-              <Home />
-            </Route>
             <Route path={`/:url`}>
               <TileContent />
             </Route>
