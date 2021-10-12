@@ -2,20 +2,20 @@
 import React, { useState } from 'react';
 import { Route, Switch, useLocation } from "react-router-dom";
 
-import LangButton from './LangButton/LangButton';
-import Home from './Components/Home/Home';
-import TileContent from './Components/Tile/TileContent/TileContent';
+import LangButton from './components/LangButton/LangButton';
+import Home from './components/Home/Home';
+import TileContent from './components/Tile/TileContent/TileContent';
 import { AnimatePresence } from 'framer-motion';
 
 import './App.scss';
-import './Components/Tile/Tile.scss'
+import './components/Tile/Tile.scss'
 
 export const LangContext = React.createContext('en');
 
 function App() {
   const location = useLocation();
   const navLang = window.navigator.language.substr(0, 2);
-  const [lang, setLang] = useState(navLang === 'pl' ? 'en' : 'pl');
+  const [lang, setLang] = useState(navLang);
   const handleChangeLang = () => setLang(prev => prev === 'pl' ? 'en' : 'pl')
 
   return (
