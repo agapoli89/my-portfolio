@@ -1,5 +1,5 @@
 export const tileData = {
-    en: [
+    pl: [
         {   
             id: 1,
             url: 'about-me',
@@ -31,10 +31,22 @@ export const tileData = {
                 moreCode: 'Trochę więcej',
                 projects: [
                     {
+                        title: 'Fundacja Pomocy Zwierzętom "Matuzalki" - w trakcjie realizacji',
+                        linkToLive: 'https://agapoli89.github.io/Matuzalki/',
+                        linkToCode: 'https://github.com/agapoli89/Matuzalki',
+                        image: 'matuzalki',
+                    },
+                    {
                         title: 'Przewodnik miejski - wizytówka',
                         linkToLive: 'https://agapoli89.github.io/WroGuide-update/',
                         linkToCode: 'https://github.com/agapoli89/WroGuide-update',
                         image: 'guide',
+                    },
+                    {
+                        title: 'Rehabilitacja psów - Cagnolino',
+                        linkToLive: 'https://rehabilitacja-psow.wroclaw.pl/',
+                        linkToCode: 'https://github.com/agapoli89/Fizjo-for-dogs',
+                        image: 'cagnolino',
                     },
                     {
                         title: 'Lista zakupów',
@@ -66,7 +78,7 @@ export const tileData = {
             delay: 0,
         },
     ],
-    pl: [
+    en: [
         {   
             id: 1,
             url: 'about-me',
@@ -98,10 +110,22 @@ export const tileData = {
                 moreCode: 'A little more',
                 projects: [
                     {
+                        title: 'Fundation for animals "Matuzalki" - in progress',
+                        linkToLive: 'https://agapoli89.github.io/Matuzalki/',
+                        linkToCode: 'https://github.com/agapoli89/Matuzalki',
+                        image: 'matuzalki',
+                    },
+                    {
                         title: 'City guide - business card website',
                         linkToLive: 'https://agapoli89.github.io/WroGuide-update/',
                         linkToCode: 'https://github.com/agapoli89/WroGuide-update',
                         image: 'guide',
+                    },
+                    {
+                        title: 'Rehabilitation of the dogs - Cagnolino',
+                        linkToLive: 'https://rehabilitacja-psow.wroclaw.pl/',
+                        linkToCode: 'https://github.com/agapoli89/Fizjo-for-dogs',
+                        image: 'cagnolino',
                     },
                     {
                         title: 'Shopping List',
